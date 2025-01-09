@@ -7,4 +7,4 @@ admin:
       targetPort: 5001
   image:
     repository: bhkhk/publish-project-admin-server
-    tags: latest
+    tags: 4
