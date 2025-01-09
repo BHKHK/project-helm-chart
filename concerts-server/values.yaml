@@ -1,0 +1,10 @@
+admin:
+  enabled: true
+  replicas: 1
+  ports:
+    - name: concert-backend
+      port: 5000
+      targetPort: 5000
+  image:
+    repository: bhkhk/publish-project-concerts-server
+    tags: latest

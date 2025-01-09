@@ -1,0 +1,10 @@
+admin:
+  enabled: true
+  replicas: 1
+  ports:
+    - name: admin
+      port: 5001
+      targetPort: 5001
+  image:
+    repository: bhkhk/publish-project-admin-server
+    tags: latest

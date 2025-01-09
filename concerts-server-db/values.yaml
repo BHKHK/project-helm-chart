@@ -1,0 +1,10 @@
+admin:
+  enabled: true
+  replicas: 1
+  ports:
+    - name: concert-db
+      port: 3306
+      targetPort: 3306
+  image:
+    repository: bhkhk/publish-project-concerts-db-server
+    tags: latest
