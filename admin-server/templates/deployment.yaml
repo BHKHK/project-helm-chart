@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: admin
-          image: {{ .Values.admin.image.repository }}
+          image: bhkhk/main-admin-server:latest
           # resources:
           #   requests:
           #     cpu: "100m"
