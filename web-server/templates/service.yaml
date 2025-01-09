@@ -8,6 +8,6 @@ spec:
     app: web
   ports:
     - protocol: TCP
-      port: 3000
-      targetPort: 3000
+      port: {{ (index .Values.web.ports 0).port }}
+      targetPort: {{ (index .Values.web.ports 0).targetPort }}
       nodePort: 30000

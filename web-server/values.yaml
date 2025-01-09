@@ -1,4 +1,4 @@
-admin:
+web:
   enabled: true
   replicas: 1
   ports:
