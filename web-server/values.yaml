@@ -6,5 +6,5 @@ web:
       port: 3000
       targetPort: 3000
   image:
-    repository: qkrtjdrb321/web-server
+    repository: bhkhk/main-web-server
     tags: latest
