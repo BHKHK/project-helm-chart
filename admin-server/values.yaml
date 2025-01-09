@@ -6,5 +6,5 @@ admin:
       port: 5001
       targetPort: 5001
   image:
-    repository: bhkhk/publish-project-admin-server
+    repository: bhkhk/main-admin-server
     tags: 4
