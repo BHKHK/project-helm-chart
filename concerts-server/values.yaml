@@ -6,5 +6,5 @@ admin:
       port: 5000
       targetPort: 5000
   image:
-    repository: bhkhk/publish-project-concerts-server
+    repository: bhkhk/main-concerts-server
     tags: latest
