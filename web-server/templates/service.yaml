@@ -3,7 +3,6 @@ kind: Service
 metadata:
   name: web-service
 spec:
-  type: NodePort
   selector:
     app: web
   ports:
@@ -11,3 +10,4 @@ spec:
       port: {{ (index .Values.web.ports 0).port }}
       targetPort: {{ (index .Values.web.ports 0).targetPort }}
       nodePort: 30000
+  type: NodePort
