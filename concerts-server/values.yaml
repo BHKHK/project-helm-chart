@@ -1,4 +1,4 @@
-admin:
+concert-backend:
   enabled: true
   replicas: 1
   ports:

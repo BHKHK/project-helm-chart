@@ -1,4 +1,4 @@
-admin:
+concert-db:
   enabled: true
   replicas: 1
   ports:

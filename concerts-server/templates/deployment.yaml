@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: concert-backend-deployment
+spec:
+  replicas: {{ .Values.concert-backend.replicas }}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  selector:
+    matchLabels:
+      app: concert-backend
+  template:
+    metadata:
+      labels:
+        app: concert-backend
+    spec:
+      containers:
+        - name: concert-backend
+          image: {{ .Values.concert-backend.image.repository }}
+          # resources:
+          #   requests:
+          #     cpu: "100m"
+          #     memory: "300Mi"
+          #   limits:
+          #     cpu: "500m"
+          #     memory: "1024Mi"
+          ports:
+            - containerPort: {{ (index .Values.concert-backend.ports 0).port }}
