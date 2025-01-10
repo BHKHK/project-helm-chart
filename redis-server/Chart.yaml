@@ -1,0 +1,7 @@
+apiVersion: v2
+name: redis-chart
+version: 1.0.0
+appVersion: 1.0.0
+description: Hangaramit Redis Helm Chart
+maintainers:
+  - name: Yedam Myung

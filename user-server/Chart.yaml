@@ -1,0 +1,7 @@
+apiVersion: v2
+name: user-chart
+version: 1.0.0
+appVersion: 1.0.0
+description: Hangaramit User Helm Chart
+maintainers:
+  - name: Yedam Myung

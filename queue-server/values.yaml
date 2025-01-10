@@ -1,4 +1,4 @@
-admin:
+queue:
   enabled: true
   replicas: 1
   ports:

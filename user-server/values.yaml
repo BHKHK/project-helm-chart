@@ -1,0 +1,10 @@
+user:
+  enabled: true
+  replicas: 1
+  ports:
+    - name: user
+      port: 5010
+      targetPort: 5010
+  image:
+    repository: bhkhk/main-user-server
+    tags: latest
