@@ -2,7 +2,7 @@ concertdb:
   enabled: true
   replicas: 1
   ports:
-    - name: concertdb
+    - name: concerts-server-db
       port: 3306
       targetPort: 3306
   image:

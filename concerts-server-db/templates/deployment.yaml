@@ -18,7 +18,7 @@ spec:
         app: concertdb
     spec:
       containers:
-        - name: concertdb
+        - name: concerts-server-db
           image: {{ .Values.concertdb.image.repository }}
           # resources:
           #   requests:
