@@ -6,5 +6,5 @@ concertdb:
       port: 3306
       targetPort: 3306
   image:
-    repository: bhkhk/main-concerts-db-server
+    repository: bhkhk/main-concerts-server-db
     tags: latest
