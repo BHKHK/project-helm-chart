@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: concert-db-deployment
+  name: concertdb-deployment
 spec:
-  replicas: {{ .Values.concert-db.replicas }}
+  replicas: {{ .Values.concertdb.replicas }}
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -11,15 +11,15 @@ spec:
       maxUnavailable: 25%
   selector:
     matchLabels:
-      app: concert-db
+      app: concertdb
   template:
     metadata:
       labels:
-        app: concert-db
+        app: concertdb
     spec:
       containers:
-        - name: concert-db
-          image: {{ .Values.concert-db.image.repository }}
+        - name: concertdb
+          image: {{ .Values.concertdb.image.repository }}
           # resources:
           #   requests:
           #     cpu: "100m"
@@ -28,4 +28,4 @@ spec:
           #     cpu: "500m"
           #     memory: "1024Mi"
           ports:
-            - containerPort: {{ (index .Values.concert-db.ports 0).port }}
+            - containerPort: {{ (index .Values.concertdb.ports 0).port }}

@@ -1,8 +1,8 @@
-concert-backend:
+concert:
   enabled: true
   replicas: 1
   ports:
-    - name: concert-backend
+    - name: concert
       port: 5000
       targetPort: 5000
   image:
