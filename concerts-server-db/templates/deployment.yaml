@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: concertdb-deployment
+  name: concerts-server-db-deployment
 spec:
   replicas: {{ .Values.concertdb.replicas }}
   strategy:
