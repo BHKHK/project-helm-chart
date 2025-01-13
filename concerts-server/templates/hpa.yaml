@@ -1,12 +1,12 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: concert-hpa
+  name: concerts-hpa
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: concert-deployment
+    name: concerts-deployment
   minReplicas: 1
   maxReplicas: 3
   metrics:

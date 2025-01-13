@@ -1,8 +1,8 @@
-concert:
+concerts:
   enabled: true
   replicas: 1
   ports:
-    - name: concert
+    - name: concerts
       port: 5000
       targetPort: 5000
   image:

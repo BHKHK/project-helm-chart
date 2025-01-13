@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: concert-deployment
+  name: concerts-deployment
 spec:
   replicas: {{ .Values.concert.replicas }}
   strategy:
@@ -11,14 +11,14 @@ spec:
       maxUnavailable: 25%
   selector:
     matchLabels:
-      app: concert
+      app: concerts
   template:
     metadata:
       labels:
-        app: concert
+        app: concerts
     spec:
       containers:
-        - name: concert
+        - name: concerts
           image: {{ .Values.concert.image.repository }}
           # resources:
           #   requests:
