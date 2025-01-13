@@ -7,6 +7,6 @@ spec:
     app: concerts
   ports:
     - protocol: TCP
-      port: {{ (index .Values.concert.ports 0).port }}
-      targetPort: {{ (index .Values.concert.ports 0).targetPort }}
+      port: {{ (index .Values.concerts.ports 0).port }}
+      targetPort: {{ (index .Values.concerts.ports 0).targetPort }}
   type: ClusterIP

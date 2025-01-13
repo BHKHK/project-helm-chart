@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: concerts-deployment
 spec:
-  replicas: {{ .Values.concert.replicas }}
+  replicas: {{ .Values.concerts.replicas }}
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: concerts
-          image: {{ .Values.concert.image.repository }}
+          image: {{ .Values.concerts.image.repository }}
           # resources:
           #   requests:
           #     cpu: "100m"
@@ -28,4 +28,4 @@ spec:
           #     cpu: "500m"
           #     memory: "1024Mi"
           ports:
-            - containerPort: {{ (index .Values.concert.ports 0).port }}
+            - containerPort: {{ (index .Values.concerts.ports 0).port }}
