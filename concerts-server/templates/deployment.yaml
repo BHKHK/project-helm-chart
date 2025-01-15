@@ -16,12 +16,13 @@ spec:
     metadata:
       annotations:
         argocd-image-updater.argoproj.io/image-list: {{ .Values.concerts.image.repository }}
-        argocd-image-updater.argoproj.io/update-strategy: latest/nuwest-build
+        argocd-image-updater.argoproj.io/update-strategy: latest/newest-build
       labels:
         app: concerts
     spec:
       containers:
         - name: concerts
+          image: {{ .Values.concerts.image.repository }}:{{ .Values.concerts.image.tag }}
           imagePullPolicy: Always
           # resources:
           #   requests:
