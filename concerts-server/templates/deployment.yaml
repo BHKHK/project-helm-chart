@@ -20,7 +20,7 @@ spec:
       containers:
         - name: concerts
           image: {{ .Values.concerts.image.repository }}:{{ .Values.concerts.image.tag }}
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
           # resources:
           #   requests:
           #     cpu: "100m"
