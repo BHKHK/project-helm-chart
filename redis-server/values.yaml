@@ -8,4 +8,4 @@ redis:
       nodePort: 30011
   image:
     repository: bhkhk/main-redis-server
-    tags: 16
+    tag: 16

@@ -4,9 +4,9 @@ metadata:
   name: concerts-server-db
 spec:
   selector:
-    app: concertdb
+    app: concertsdb
   ports:
     - protocol: TCP
-      port: {{ (index .Values.concertdb.ports 0).port }}
-      targetPort: {{ (index .Values.concertdb.ports 0).targetPort }}
+      port: {{ (index .Values.concertsdb.ports 0).port }}
+      targetPort: {{ (index .Values.concertsdb.ports 0).targetPort }}
   type: ClusterIP

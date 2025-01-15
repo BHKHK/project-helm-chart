@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: concerts-server-db-deployment
 spec:
-  replicas: {{ .Values.concertdb.replicas }}
+  replicas: {{ .Values.concertsdb.replicas }}
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -11,15 +11,15 @@ spec:
       maxUnavailable: 25%
   selector:
     matchLabels:
-      app: concertdb
+      app: concertsdb
   template:
     metadata:
       labels:
-        app: concertdb
+        app: concertsdb
     spec:
       containers:
         - name: concerts-server-db
-          image: bhkhk/main-concerts-server-db:16
+          image: {{ .Values.concertsdb.image.repository }}:{{ .Values.concertsdb.image.tag }}
           # resources:
           #   requests:
           #     cpu: "100m"
@@ -28,4 +28,4 @@ spec:
           #     cpu: "500m"
           #     memory: "1024Mi"
           ports:
-            - containerPort: {{ (index .Values.concertdb.ports 0).port }}
+            - containerPort: {{ (index .Values.concertsdb.ports 0).port }}

@@ -1,4 +1,4 @@
-concertdb:
+concertsdb:
   enabled: true
   replicas: 1
   ports:
@@ -7,4 +7,4 @@ concertdb:
       targetPort: 3306
   image:
     repository: bhkhk/main-concerts-server-db
-    tags: 16
+    tag: 16
