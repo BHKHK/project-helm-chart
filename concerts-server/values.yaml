@@ -1,6 +1,6 @@
 concerts:
   enabled: true
-  replicas: 2
+  replicas: 1
   ports:
     - name: concerts
       port: 5000

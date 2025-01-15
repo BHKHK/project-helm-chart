@@ -14,9 +14,6 @@ spec:
       app: concerts
   template:
     metadata:
-      annotations:
-        argocd-image-updater.argoproj.io/image-list: {{ .Values.concerts.image.repository }}
-        argocd-image-updater.argoproj.io/update-strategy: latest/newest-build
       labels:
         app: concerts
     spec:
