@@ -7,4 +7,4 @@ gate:
       targetPort: 8080
   image:
     repository: bhkhk/main-sgw-server
-    tag: 26
+    tag: 27
