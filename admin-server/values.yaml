@@ -7,4 +7,4 @@ admin:
       targetPort: 5001
   image:
     repository: bhkhk/main-admin-server
-    tags: latest
+    tags: 16

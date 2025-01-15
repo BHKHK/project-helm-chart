@@ -8,4 +8,4 @@ concerts:
       nodePort: 30005
   image:
     repository: bhkhk/main-concerts-server
-    tags: latest
+    tags: 16
