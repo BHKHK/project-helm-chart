@@ -20,6 +20,7 @@ spec:
       containers:
         - name: queue
           image: {{ .Values.queue.image.repository }}:{{ .Values.queue.image.tag }}
+          imagePullPolicy: Always
           # resources:
           #   requests:
           #     cpu: "100m"

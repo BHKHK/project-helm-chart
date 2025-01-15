@@ -20,6 +20,7 @@ spec:
       containers:
         - name: web
           image: {{ .Values.web.image.repository }}:{{ .Values.web.image.tag }}
+          imagePullPolicy: Always
           # resources:
           #   requests:
           #     cpu: "100m"
