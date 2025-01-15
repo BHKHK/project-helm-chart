@@ -1,6 +1,6 @@
 gate:
   enabled: true
-  replicas: 2
+  replicas: 1
   ports:
     - name: gate
       port: 8080
