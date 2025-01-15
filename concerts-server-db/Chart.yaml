@@ -1,5 +1,5 @@
 apiVersion: v2
-name: concert-db-chart
+name: concerts-db-chart
 version: 1.0.0
 appVersion: 1.0.0
 description: Hangaramit Concerts DB Helm Chart
