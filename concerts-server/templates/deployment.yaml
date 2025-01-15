@@ -20,7 +20,7 @@ spec:
       containers:
         - name: concerts
           image: {{ .Values.concerts.image.repository }}:{{ .Values.concerts.image.tag }}
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           # resources:
           #   requests:
           #     cpu: "100m"
@@ -29,4 +29,6 @@ spec:
           #     cpu: "500m"
           #     memory: "1024Mi"
           ports:
-            - containerPort: {{ (index .Values.concerts.ports 0).port }}
+            - name: http
+              containerPort: {{ (index .Values.concerts.ports 0).port }}
+              protocol: TCP
