@@ -5,6 +5,7 @@ user:
     - name: user
       port: 5010
       targetPort: 5010
+      nodePort: 5010
   image:
     repository: bhkhk/main-user-server
     tags: latest

@@ -9,4 +9,5 @@ spec:
     - protocol: TCP
       port: {{ (index .Values.concerts.ports 0).port }}
       targetPort: {{ (index .Values.concerts.ports 0).targetPort }}
-  type: ClusterIP
+      nodePort: {{ (index .Values.concerts.ports 0).nodePort }}
+  type: NodePort

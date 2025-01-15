@@ -9,4 +9,5 @@ spec:
     - protocol: TCP
       port: {{ (index .Values.queue.ports 0).port }}
       targetPort: {{ (index .Values.queue.ports 0).targetPort }}
-  type: ClusterIP
+      nodePort: {{ (index .Values.queue.ports 0).nodePort }}
+  type: NodePort
