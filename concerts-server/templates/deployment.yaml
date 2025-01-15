@@ -22,7 +22,6 @@ spec:
     spec:
       containers:
         - name: concerts
-          image: {{ .Values.concerts.image.repository }}
           imagePullPolicy: Always
           # resources:
           #   requests:
