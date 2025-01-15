@@ -8,4 +8,4 @@ redis:
       # nodePort: 30011
   image:
     repository: bhkhk/main-redis-server
-    tag: 24
+    tag: latest

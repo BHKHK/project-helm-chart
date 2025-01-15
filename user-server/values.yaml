@@ -8,4 +8,4 @@ user:
       # nodePort: 30100
   image:
     repository: bhkhk/main-user-server
-    tag: 24
+    tag: latest

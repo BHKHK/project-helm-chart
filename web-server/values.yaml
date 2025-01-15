@@ -7,4 +7,4 @@ web:
       targetPort: 3000
   image:
     repository: bhkhk/main-web-server
-    tag: 24
+    tag: latest

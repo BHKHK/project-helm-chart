@@ -8,4 +8,4 @@ queue:
       # nodePort: 30010
   image:
     repository: bhkhk/main-queue-server
-    tag: 24
+    tag: latest
