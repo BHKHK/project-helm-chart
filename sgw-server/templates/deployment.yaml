@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: concerts-deployment
+  name: gate-deployment
 spec:
-  replicas: {{ .Values.concerts.replicas }}
+  replicas: {{ .Values.gate.replicas }}
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -11,15 +11,15 @@ spec:
       maxUnavailable: 25%
   selector:
     matchLabels:
-      app: concerts
+      app: gate
   template:
     metadata:
       labels:
-        app: concerts
+        app: gate
     spec:
       containers:
-        - name: concerts
-          image: {{ .Values.concerts.image.repository }}:{{ .Values.concerts.image.tag }}
+        - name: gate
+          image: {{ .Values.gate.image.repository }}:{{ .Values.gate.image.tag }}
           # resources:
           #   requests:
           #     cpu: "100m"
@@ -28,4 +28,4 @@ spec:
           #     cpu: "500m"
           #     memory: "1024Mi"
           ports:
-            - containerPort: {{ (index .Values.concerts.ports 0).port }}
+            - containerPort: {{ (index .Values.gate.ports 0).port }}

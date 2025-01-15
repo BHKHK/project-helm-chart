@@ -9,5 +9,5 @@ spec:
     - protocol: TCP
       port: {{ (index .Values.redis.ports 0).port }}
       targetPort: {{ (index .Values.redis.ports 0).targetPort }}
-      nodePort: {{ (index .Values.redis.ports 0).nodePort }}
-  type: NodePort
+      # nodePort: {{ (index .Values.redis.ports 0).nodePort }}
+  type: ClusterIP

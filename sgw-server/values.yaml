@@ -1,0 +1,10 @@
+gate:
+  enabled: true
+  replicas: 2
+  ports:
+    - name: gate
+      port: 8080
+      targetPort: 8080
+  image:
+    repository: bhkhk/main-sgw-server
+    tag: 24

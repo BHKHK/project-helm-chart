@@ -5,7 +5,7 @@ concerts:
     - name: concerts
       port: 5000
       targetPort: 5000
-      nodePort: 30005
+      # nodePort: 30005
   image:
     repository: bhkhk/main-concerts-server
-    tags: 16
+    tag: latest
