@@ -14,12 +14,15 @@ spec:
       app: concerts
   template:
     metadata:
+      annotations:
+        argocd-image-updater.argoproj.io/image-list: {{ .Values.concerts.image.repository }}
+        argocd-image-updater.argoproj.io/update-strategy: latest
       labels:
         app: concerts
     spec:
       containers:
         - name: concerts
-          image: {{ .Values.concerts.image.repository }}:{{ .Values.concerts.image.tag }}
+          image: {{ .Values.concerts.image.repository }}
           imagePullPolicy: Always
           # resources:
           #   requests:
@@ -32,3 +35,4 @@ spec:
             - name: http
               containerPort: {{ (index .Values.concerts.ports 0).port }}
               protocol: TCP
+  
